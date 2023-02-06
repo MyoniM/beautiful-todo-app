@@ -1,10 +1,8 @@
-This is a repo for Scientific Revolution Earth Fullstack - Challenge
-
 Deployed URL: http://18.233.63.31 (hosted on AWS EC2 instance)
 
 You can create your own account or use the one below to get loaded data
-- Username : maruf
-- Password : maruf
+- Username : Yonatan
+- Password : Yonatan
 
 The project is built using:
 - React (antd)
@@ -12,8 +10,9 @@ The project is built using:
 - Express.js
 - Typescript
 - Prisma ORM
-- PostgeSql (Couldn't find a free tier hosting service for mysql )
+- PostgeSql
 - AWS
+
 You can find the API documentaion here: http://18.233.63.31/api-docs
 
 - Here is the sample web screenshot for the app:
