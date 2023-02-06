@@ -1,0 +1,21 @@
+.cardWrapper {
+  width: 250px;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.bodyWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bodyWrapper p {
+  margin: 0;
+}
+
+.bodyWrapper h3 {
+  margin: 0;
+}
+

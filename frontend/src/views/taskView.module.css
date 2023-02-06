@@ -1,0 +1,11 @@
+.headerWrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+.moreVert {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

@@ -1,0 +1,48 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                      String                    @id @default(uuid())
+  name                    String
+  password                String
+  Task                    Task[]
+  UserFavoriteCollections UserFavoriteCollections[]
+}
+
+model UserFavoriteCollections {
+  user         User       @relation(fields: [userId], references: [id])
+  collection   Collection @relation(fields: [collectionId], references: [id])
+  userId       String
+  collectionId String
+
+  @@id([userId, collectionId])
+}
+
+model Collection {
+  id                      String                    @id @default(uuid())
+  name                    String
+  icon                    String
+  tasks                   Task[]
+  UserFavoriteCollections UserFavoriteCollections[]
+}
+
+model Task {
+  id           String      @id @default(uuid())
+  title        String
+  date         DateTime
+  completed    Boolean
+  Collection   Collection? @relation(fields: [collectionId], references: [id])
+  collectionId String?
+  subTasks     Task[]      @relation(name: "subtasks")
+  Task         Task?       @relation(name: "subtasks", fields: [taskId], references: [id], onDelete: Cascade)
+  taskId       String?
+  addedBy      User        @relation(fields: [userId], references: [id])
+  userId       String
+}
