@@ -16,6 +16,7 @@ The project is built using:
 You can find the API documentaion here: http://18.233.63.31/api-docs
 
 - Here is the sample web screenshot for the app:
+[Video demo](https://user-images.githubusercontent.com/61096394/217033076-31a20db2-c97f-4f7d-9631-4f90ab4acbc9.webm)
 
 ![image](https://user-images.githubusercontent.com/56218443/216784810-85b3be0b-a385-45bd-ae55-e6262ff689b2.png)
 
